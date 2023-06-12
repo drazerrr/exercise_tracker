@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 app.use(cors())
 
-const mySecret = process.env['MONGO_URI']
+const mySecret = process.env.MONGO_URI
 mongoose.connect( mySecret, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const UserSchema = new mongoose.Schema({
